@@ -8,13 +8,13 @@
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:image:src" content="">
   <meta property="og:image" content="">
-  <meta name="twitter:title" content="Tu: ParaView to Blender">
+  <meta name="twitter:title" content="Blender: ParaView to Blender">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
   <meta name="description" content="">
   
   
-  <title>Tu: ParaView to Blender</title>
+  <title>Blender: ParaView to Blender</title>
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,400,500,600,700,100i,200i,300i,400i,500i,600i,700i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,400,500,600,700,100i,200i,300i,400i,500i,600i,700i&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
   
@@ -85,9 +87,9 @@
 
 <section data-bs-version="5.1" class="content5 cid-t5uKNUaak4" id="content5-1p">
     
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-12">
+            <div class="col-md-12 col-lg-10">
                 <p class="mbr-text mbr-fonts-style display-7">If you want to render your CFD results, but your results exported from ParaView look like a Play Station 2 game rather than a super sick professional rendering, you'll need to use Blender. This is quick and easy for single timesteps, but ParaView only allows you export a scene from a single timestep. Blender also only allows you to import one scene at a time. Luckily there are python scripts that can be used to automate the process. Flexi CFD has Blender Pipeline (<a href="https://github.com/flexi-framework/BlenderPipeline" class="text-info">https://github.com/flexi-framework/BlenderPipeline</a>) scripts that do this, but Blender changed there API since its release. I also found it to be more convenient to use a ParaView macro to export all of the x3d files instead of using the first script.</p>
             </div>
         </div>
@@ -159,7 +161,7 @@
             </div>
             <div class="col-12 col-lg">
                 <div class="text-wrapper">
-                    <p class="mbr-text mbr-fonts-style display-7">Some of the parameters need to be edited in the macro.<br><em><strong>Macros &gt;&gt; edit... &gt;&gt; exportx3d</strong></em><em><strong><br></strong></em>Change <em><strong>D:/outputLocation/</strong></em> to the path of the folder you want your x3d files to be saved in.<br>Change <em><strong>fileName</strong></em> to whatever you want your files to be called. They will be automatically numbered so they can be opened in order.<br></p>
+                    <p class="mbr-text mbr-fonts-style display-7">Some of the parameters need to be edited in the macro.<br><em><strong>Macros &gt;&gt; edit... &gt;&gt; exportx3d</strong></em><em><strong><br></strong></em>Change <em><strong>D:/outputLocation/</strong></em> to the path of the folder you want your x3d files to be saved in.<br>Change <em><strong>fileName</strong></em> to whatever you want your files to be called. They will be automatically numbered so they can be opened in order.<br>Save and close the Script Editor.</p>
                 </div>
             </div>
         </div>
@@ -168,13 +170,183 @@
 
 <section data-bs-version="5.1" class="content5 cid-t5vnJVcmRR" id="content5-20">
     
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-10">
-                <p class="mbr-text mbr-fonts-style display-7">To run the macro go to <em>Macros &gt;&gt; exportx3d</em>.&nbsp;The output folder should start populating with x3d files. It will probably take a while and a lot of storage depending on how many timesteps there are.</p>
+                <p class="mbr-text mbr-fonts-style display-7">To run the macro go to <em>Macros &gt;&gt; exportx3d</em>.&nbsp;The output folder should start populating with x3d files. It could take some time and a lot of storage depending on how many timesteps there are.</p>
             </div>
         </div>
     </div>
+</section>
+
+<section data-bs-version="5.1" class="content5 cid-t5A7XntFRX" id="content5-21">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <p class="mbr-text mbr-fonts-style display-7">The next step is to prepare your scene in Blender. Open blender and go to <em>File &gt;&gt; Import &gt;&gt; X3D Extensible 3D (.x3d/.wrl)</em>. Select any of the timesteps from your output file.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="image3 cid-t5Aa2lc43Z" id="image3-23">
+    
+
+    
+    
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-11">
+                <div class="image-wrapper">
+                    <img src="assets/images/t4-1920x1016.png" alt="">
+                    <p class="mbr-description mbr-fonts-style mt-2 align-center display-4"><em>x3d imported into Blender</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content5 cid-t5AaqsxJd0" id="content5-24">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <p class="mbr-text mbr-fonts-style display-7">You can delete the items highlighted above because Blender has a light and camera in the scene by default. Here you can set up the scene however you like by adding lights, adjusting camera, etc... It's easiest if you can avoid moving the imported Shape_IndexedFaceSet because you will need to enter the displacement into the animate_blender.py script later. This is because the script works by deletes and reimports the object for every frame.<br> <br>In order to get the colormap data from ParaView to be visible, we need to create a material for our object.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="image3 cid-t5Ad74B2UU" id="image3-25">
+    
+
+    
+    
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-11">
+                <div class="image-wrapper">
+                    <img src="assets/images/t5-1-1920x1018.png" alt="">
+                    <p class="mbr-description mbr-fonts-style mt-2 align-center display-4"><em>Blender Shader Editor and Material Preview mode</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content5 cid-t5AdSsAfOo" id="content5-26">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <p class="mbr-text mbr-fonts-style display-7">To enter Material Preview mode click on the highlighted icon in the top right corner. This will make materials we create and assign visible in the Viewport. To edit materials, click on the highlighted icon in the bottom left and select Shader Editor. Then, with the object selected, click new.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="image3 cid-t5AijUZ8XK" id="image3-29">
+    
+
+    
+    
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-11">
+                <div class="image-wrapper">
+                    <img src="assets/images/t6-1918x1018.png" alt="">
+                    <p class="mbr-description mbr-fonts-style mt-2 align-center display-4"><em>Material Created</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content5 cid-t5Aj5nPzT0" id="content5-2a">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <p class="mbr-text mbr-fonts-style display-7">First, delete the Principled BSDF. Then&nbsp;<em><strong>Add &gt;&gt; Shader&gt;&gt; Diffuse BSDF</strong></em>. <em><strong>Add &gt;&gt; Input &gt;&gt; Attribute</strong></em>. In the object data properties on the right, we can find the active vertex color index on our object. Use the name of this for the name field in the attribute panel (It's usually Col by default). Connect The modules as shown and the colormap from Paraview should be visible on our object.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="image2 cid-t5ArzIb3YC" id="image2-2b">
+    
+
+    
+    
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-8">
+                <div class="image-wrapper">
+                    <img src="assets/images/t7-1696x897.png" alt="">
+                    <p class="mbr-description mbr-fonts-style mt-2 align-center display-4"><em>Complete Scene ready to be rendered</em></p>
+                </div>
+            </div>
+            <div class="col-12 col-lg">
+                <div class="text-wrapper">
+                    <p class="mbr-text mbr-fonts-style display-7">Select the shield icon next to the material name to make sure the material is not deleted when it is unassigned. Select the Cycles rendering engine on the right side. The last thing we need to do before we save and close our scene is to delete&nbsp;the imported Shape_IndexedFaceSet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="image2 cid-t5ALzDkhTS" id="image2-2c">
+    
+
+    
+    
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-8">
+                <div class="image-wrapper">
+                    <img src="assets/images/t8-909x578.png" alt="">
+                    <p class="mbr-description mbr-fonts-style mt-2 align-center display-4"><em>Simulation results post processed as they will be rendered</em></p>
+                </div>
+            </div>
+            <div class="col-12 col-lg">
+                <div class="text-wrapper">
+                    <p class="mbr-text mbr-fonts-style display-7">Edit the animate_blender.py script using your preferred editor (Notepad works if you have nothing else). The three highlighted values are mandatory, the rest can be left unless you wanted&nbsp;Shape_IndexedFaceSet to be moved. The paths to the folders are relative to where the script is, so if your folder is in the same folder as the script, the path is just its name as shown in outputFolder. If the folder is in a different folder, you need to include the full path as it's shown in importFolder.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content5 cid-t5AP2KZfYO" id="content5-2d">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <p class="mbr-text mbr-fonts-style display-7">The last thing to do is to run the script. If you are on linux, navigate to the location of the script in the terminal. If you are on windows, open cmd and navigate to the folder there. Once in the folder type :</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content5 cid-t5APV2Yi86" id="content5-2e">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="boxed">
+                    <p class="mbr-text mbr-fonts-style display-11">blender -b filePath --python animate_blender2.9.py</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
 </section>
 
 <section data-bs-version="5.1" class="footer3 cid-t5uJo5JNgU" once="footers" id="footer3-1l">
